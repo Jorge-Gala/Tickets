@@ -26,7 +26,7 @@
         /* TODO: Ruta o Link del proyecto */
         public static function ruta(){
             //TODO: Ruta Proyecto Local (seria 80)
-			return "http://localhost:80/gestor-de-tickets/";
+			return "http://localhost:8080/gestor-de-tickets/";
             //TODO: Ruta Proyecto Produccion
             //return "http://helpdesk.anderson-bastidas.com/";
 		}

@@ -29,7 +29,7 @@ function listardetalle(tick_id){
         $('#lblfechcierre').val(data.fech_cierre);
 
         if (data.tick_estado_texto=='Abierto') {
-            window.open('http://localhost:80/gestor-de-tickets/','_self');
+            window.open('http://localhost:8080/gestor-de-tickets/','_self');
         }else{
             if (data.tick_estre==null){
 
