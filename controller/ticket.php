@@ -86,25 +86,25 @@
                 if ($row["tick_estado"]=="Abierto"){
                     $sub_array[] = '<span class="label label-pill label-success">Abierto</span>';
                 }else{
-                    $sub_array[] = '<a onClick="CambiarEstado('.$row["tick_id"].')"><span class="label label-pill label-danger">Cerrado</span></a>';
+                    $sub_array[] = '<a onClick="CambiarEstado('.$row["tick_id"].')"><span class="label label-pill label-default">Cerrado</span></a>';
                 }
 
                 $sub_array[] = date("d/m/Y H:i:s", strtotime($row["fech_crea"]));
 
                 if($row["fech_asig"]==null){
-                    $sub_array[] = '<span class="label label-pill label-default">Sin Asignar</span>';
+                    $sub_array[] = '<span class="label label-pill label-danger">Sin Asignar</span>';
                 }else{
                     $sub_array[] = date("d/m/Y H:i:s", strtotime($row["fech_asig"]));
                 }
 
                 if($row["fech_cierre"]==null){
-                    $sub_array[] = '<span class="label label-pill label-default">Sin Cerrar</span>';
+                    $sub_array[] = '<span class="label label-pill label-warning">Sin Cerrar</span>';
                 }else{
                     $sub_array[] = date("d/m/Y H:i:s", strtotime($row["fech_cierre"]));
                 }
 
                 if($row["usu_asig"]==null){
-                    $sub_array[] = '<span class="label label-pill label-warning">Sin Asignar</span>';
+                    $sub_array[] = '<span class="label label-pill label-danger">Sin Asignar</span>';
                 }else{
                     $datos1=$usuario->get_usuario_x_id($row["usu_asig"]);
                     foreach($datos1 as $row1){
@@ -139,25 +139,25 @@
                 if ($row["tick_estado"]=="Abierto"){
                     $sub_array[] = '<span class="label label-pill label-success">Abierto</span>';
                 }else{
-                    $sub_array[] = '<a onClick="CambiarEstado('.$row["tick_id"].')"><span class="label label-pill label-danger">Cerrado</span><a>';
+                    $sub_array[] = '<a onClick="CambiarEstado('.$row["tick_id"].')"><span class="label label-pill label-default">Cerrado</span><a>';
                 }
 
                 $sub_array[] = date("d/m/Y H:i:s", strtotime($row["fech_crea"]));
 
                 if($row["fech_asig"]==null){
-                    $sub_array[] = '<span class="label label-pill label-default">Sin Asignar</span>';
+                    $sub_array[] = '<span class="label label-pill label-danger">Sin Asignar</span>';
                 }else{
                     $sub_array[] = date("d/m/Y H:i:s", strtotime($row["fech_asig"]));
                 }
 
                 if($row["fech_cierre"]==null){
-                    $sub_array[] = '<span class="label label-pill label-default">Sin Cerrar</span>';
+                    $sub_array[] = '<span class="label label-pill label-warning">Sin Cerrar</span>';
                 }else{
                     $sub_array[] = date("d/m/Y H:i:s", strtotime($row["fech_cierre"]));
                 }
 
                 if($row["usu_asig"]==null){
-                    $sub_array[] = '<a onClick="asignar('.$row["tick_id"].');"><span class="label label-pill label-warning">Sin Asignar</span></a>';
+                    $sub_array[] = '<a onClick="asignar('.$row["tick_id"].');"><span class="label label-pill label-danger">Sin Asignar</span></a>';
                 }else{
                     $datos1=$usuario->get_usuario_x_id($row["usu_asig"]);
                     foreach($datos1 as $row1){
@@ -192,25 +192,25 @@
                 if ($row["tick_estado"]=="Abierto"){
                     $sub_array[] = '<span class="label label-pill label-success">Abierto</span>';
                 }else{
-                    $sub_array[] = '<a onClick="CambiarEstado('.$row["tick_id"].')"><span class="label label-pill label-danger">Cerrado</span><a>';
+                    $sub_array[] = '<a onClick="CambiarEstado('.$row["tick_id"].')"><span class="label label-pill label-default">Cerrado</span><a>';
                 }
 
                 $sub_array[] = date("d/m/Y H:i:s", strtotime($row["fech_crea"]));
 
                 if($row["fech_asig"]==null){
-                    $sub_array[] = '<span class="label label-pill label-default">Sin Asignar</span>';
+                    $sub_array[] = '<span class="label label-pill label-danger">Sin Asignar</span>';
                 }else{
                     $sub_array[] = date("d/m/Y H:i:s", strtotime($row["fech_asig"]));
                 }
 
                 if($row["fech_cierre"]==null){
-                    $sub_array[] = '<span class="label label-pill label-default">Sin Cerrar</span>';
+                    $sub_array[] = '<span class="label label-pill label-warning">Sin Cerrar</span>';
                 }else{
                     $sub_array[] = date("d/m/Y H:i:s", strtotime($row["fech_cierre"]));
                 }
 
                 if($row["usu_asig"]==null){
-                    $sub_array[] = '<a onClick="asignar('.$row["tick_id"].');"><span class="label label-pill label-warning">Sin Asignar</span></a>';
+                    $sub_array[] = '<a onClick="asignar('.$row["tick_id"].');"><span class="label label-pill label-danger">Sin Asignar</span></a>';
                 }else{
                     $datos1=$usuario->get_usuario_x_id($row["usu_asig"]);
                     foreach($datos1 as $row1){
@@ -338,7 +338,7 @@
                     if ($row["tick_estado"]=="Abierto"){
                         $output["tick_estado"] = '<span class="label label-pill label-success">Abierto</span>';
                     }else{
-                        $output["tick_estado"] = '<span class="label label-pill label-danger">Cerrado</span>';
+                        $output["tick_estado"] = '<span class="label label-pill label-default">Cerrado</span>';
                     }
 
                     $output["tick_estado_texto"] = $row["tick_estado"];
