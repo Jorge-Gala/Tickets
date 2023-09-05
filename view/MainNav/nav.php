@@ -48,28 +48,28 @@
                     <li class="blue-dirty">
                         <a href="..\MntUsuario\">
                             <span class="glyphicon glyphicon-th"></span>
-                            <span class="lbl">Mant. Usuario</span>
+                            <span class="lbl">Usuarios</span>
                         </a>
                     </li>
 
                     <li class="blue-dirty">
                         <a href="..\MntPrioridad\">
                             <span class="glyphicon glyphicon-th"></span>
-                            <span class="lbl">Mant. Prioridad</span>
+                            <span class="lbl">Prioridad</span>
                         </a>
                     </li>
 
                     <li class="blue-dirty">
                         <a href="..\MntCategoria\">
                             <span class="glyphicon glyphicon-th"></span>
-                            <span class="lbl">Mant. Categoria</span>
+                            <span class="lbl">Categorias</span>
                         </a>
                     </li>
 
                     <li class="blue-dirty">
                         <a href="..\MntSubCategoria\">
                             <span class="glyphicon glyphicon-th"></span>
-                            <span class="lbl">Mant. Sub Categoria</span>
+                            <span class="lbl">Sub Categorias</span>
                         </a>
                     </li>
 
@@ -77,6 +77,13 @@
                         <a href="..\ConsultarTicket\">
                             <span class="glyphicon glyphicon-th"></span>
                             <span class="lbl">Consultar Ticket</span>
+                        </a>
+                    </li>
+
+                    <li class="blue-dirty">
+                        <a href="..\MonitorearTicket\">
+                            <span class="glyphicon glyphicon-th"></span>
+                            <span class="lbl">Monitoreo de Tickets</span>
                         </a>
                     </li>
                 </ul>

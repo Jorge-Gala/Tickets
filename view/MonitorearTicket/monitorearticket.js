@@ -30,6 +30,7 @@ $(document).ready(function(){
         $('#viewuser').hide();
 
         tabla=$('#ticket_data').dataTable({
+            "bPaginate": false,
             "aProcessing": true,
             "aServerSide": true,
             dom: 'Bfrtip',
@@ -51,7 +52,9 @@ $(document).ready(function(){
                     console.log(e.responseText);
                 }
             },
-            "ordering": false,
+            order: [[3, 'asc']],
+            //"ordering": false,
+            "bPaginate": false,
             "bDestroy": true,
             "responsive": true,
             "bInfo":true,
@@ -200,12 +203,13 @@ $(document).on("click","#btntodo", function(){
 /* TODO: Listar datatable con filtro avanzado */
 function listardatatable(tick_titulo,cat_id,prio_id){
     tabla=$('#ticket_data').dataTable({
+        "bPaginate": false,
         "aProcessing": true,
         "aServerSide": true,
         dom: 'Bfrtip',
         "searching": true,
         lengthChange: false,
-        colReorder: true,
+        //colReorder: true,
         buttons: [
                 'copyHtml5',
                 'excelHtml5',
@@ -221,6 +225,29 @@ function listardatatable(tick_titulo,cat_id,prio_id){
                 console.log(e.responseText);
             }
         },
+        "columnDefs": [
+            {
+                "targets": 3, // Columna 3
+                "orderData": [3], // Usa la ordenación personalizada solo para esta columna
+                "render": function(data, type, full, meta) {
+                    switch (data) {
+                        case 'Alto':
+                            return '1. Alto';
+                        case 'Medio':
+                            return '2. Medio';
+                        case 'Bajo':
+                            return '3. Bajo';
+                        default:
+                            return 0; // Otros valores
+                    }
+                }
+            },
+            {
+                "targets": 3, // Columna 3
+                "type": "string" // Establece el tipo de datos como numérico con formato
+            }
+        ],
+        "order": [[3, 'asc']],
         "bDestroy": true,
         "responsive": true,
         "bInfo":true,
@@ -243,7 +270,7 @@ function listardatatable(tick_titulo,cat_id,prio_id){
                 "sFirst":    "Primero",
                 "sLast":     "Último",
                 "sNext":     "Siguiente",
-                "sPrevious": "Anterior"
+                "sPrevious": "Anterior",
             },
             "oAria": {
                 "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",

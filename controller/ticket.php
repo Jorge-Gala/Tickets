@@ -97,6 +97,11 @@
                     $sub_array[] = date("d/m/Y H:i:s", strtotime($row["fech_asig"]));
                 }
 
+                $sub_array[] = $row["timeresp"];
+                $sub_array[] = $row["timetransc"];
+                $sub_array[] = $row["timetarea"];
+                $sub_array[] = $row["tiempototal"];
+
                 if($row["fech_cierre"]==null){
                     $sub_array[] = '<span class="label label-pill label-warning">Sin Cerrar</span>';
                 }else{
@@ -150,6 +155,11 @@
                     $sub_array[] = date("d/m/Y H:i:s", strtotime($row["fech_asig"]));
                 }
 
+                $sub_array[] = $row["timeresp"];
+                $sub_array[] = $row["timetransc"];
+                $sub_array[] = $row["timetarea"];
+                $sub_array[] = $row["tiempototal"];
+
                 if($row["fech_cierre"]==null){
                     $sub_array[] = '<span class="label label-pill label-warning">Sin Cerrar</span>';
                 }else{
@@ -202,6 +212,11 @@
                 }else{
                     $sub_array[] = date("d/m/Y H:i:s", strtotime($row["fech_asig"]));
                 }
+
+                $sub_array[] = $row["timeresp"];
+                $sub_array[] = $row["timetransc"];
+                $sub_array[] = $row["timetarea"];
+                $sub_array[] = $row["tiempototal"];
 
                 if($row["fech_cierre"]==null){
                     $sub_array[] = '<span class="label label-pill label-warning">Sin Cerrar</span>';

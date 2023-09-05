@@ -15,18 +15,20 @@
     
     <?php require_once("../MainNav/nav.php");?>
 	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
 	<!-- Contenido -->
 	<div class="page-content" id="recarga">
 		<div class="container-fluid">
 
-			<header class="section-header">
+		<header class="section-header">
 				<div class="tbl">
 					<div class="tbl-row">
 						<div class="tbl-cell">
-							<h3>Consultar Tickets</h3>
+							<h3>Monitoreo de Tickets en Tiempo Real</h3>
 							<ol class="breadcrumb breadcrumb-simple">
 								<li><a href="#">Home</a></li>
-								<li class="active">Consultar Tickets</li>
+								<li class="active">Monitoreo de Tickets</li>
 							</ol>
 						</div>
 					</div>
@@ -113,9 +115,25 @@
 
 	<?php require_once("../MainJs/js.php");?>
 
-	<script type="text/javascript" src="consultarticket.js"></script>
+	<script type="text/javascript" src="monitorearticket.js"></script>
 
 	<script type="text/javascript" src="../notificacion.js"></script>
+
+	<script>
+    let segundos_recarga = 90;
+    let miFecha = new Date();
+    let dato_url = miFecha.getYear().toString() + miFecha.getMonth().toString() + miFecha.getDate().toString() + miFecha.getHours().toString() + miFecha.getMinutes().toString() + miFecha.getSeconds().toString();
+    setTimeout( function() {
+      window.location = `index.php?parametro=${dato_url}`;
+    }, segundos_recarga * 1000);
+  	</script>
+	<script>
+		$(document).ready(function(){
+			$().DataTable({
+				"paging": false
+			})
+		});
+	</script>
 
 </body>
 </html>
